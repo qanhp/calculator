@@ -1,0 +1,85 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font: 20px Roboto, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #AAAAAA;
+    height: 550px;
+    width: 390px;
+    border-radius: 10px;
+    /* border-color: solid black; */
+    border: 2px solid black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.container_top {
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+    flex: auto;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.container_mid {
+    /* background-color: magenta; */
+    display: flex;
+    justify-content:space-between;
+    width: 350px;
+    gap:10px;
+}
+
+.container_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* background-color: blue; */
+    width: 350px;
+    height: 310px;
+}
+
+.buttons.buttons_mid {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttons {
+    height: 70px;
+    width: 80px;
+    border-radius: 5px;
+    font: 20px Roboto, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.buttons:hover {
+    background-color: #DDDDDD;
+}
+
+.lösung {
+    font-size: 40px;
+}
