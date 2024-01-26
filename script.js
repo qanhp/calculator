@@ -1,5 +1,8 @@
-// 4 variablen zum rechnen -> 2 rechenelemente und 1 lösungselement; 1 rechenzeichen
+//todo:
+// - fehler wenn verkettetes Rechnen mit Rechenzeichenwechsel
+// - clear und delete button
 
+// 4 variablen zum rechnen -> 2 rechenelemente und 1 lösungselement; 1 rechenzeichen
 let el1 = "";
 let b1 = false;
 let el2 = "";
@@ -182,10 +185,6 @@ equalButton.addEventListener("click", function() {
     }
 })
 
-//
-const clickNumber = function() {
-
-}
 
 //rechnen
 const add = function(x,y) {
@@ -217,3 +216,32 @@ const update = function(number) {
     // lösungsweg.textContent = el1;
     
 }
+
+// clear and delete
+let clearButton = document.querySelector("#clear");
+let deleteButton = document.querySelector("#delete");
+
+clearButton.addEventListener("click", function() {
+    el1 = "";
+    el2 = "";
+    lösungselement = "";
+    rechenzeichen = "";
+    number = "";
+    b1 = false;
+    lösungsweg.textContent = "0";
+    lösung.textContent = "0";
+})
+
+deleteButton.addEventListener("click", function() {
+    number = number.slice(0,-1);
+    if (b1==false) {
+        el1 = number;   
+    lösung.textContent = el1;
+    lösungsweg.textContent = el1 + " " + rechenzeichen + " " + el2;
+    } else {
+        el2 = number;
+        lösung.textContent = el2;
+        lösungsweg.textContent = el1 + " " + rechenzeichen + " " + el2;
+    }
+
+})
